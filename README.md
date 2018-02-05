@@ -2,12 +2,12 @@
 MilliSaraylar.gov.tr
 
 
-Dökümantasyon__
+Dökümantasyon
 
-resources/views/front -> View ünitesi__
-app/Http/Controllers/Front -> Controller ünitesi
-app -> Model ünitesi
-routes -> Yönlendirmeler
-front/css/saraylar.css -> Css yapısı
-front/js/script.js & script1.js -> Jquery yapısı
+resources/views/front -> View ünitesi<br />
+app/Http/Controllers/Front -> Controller ünitesi<br />
+app -> Model ünitesi<br />
+routes -> Yönlendirmeler<br />
+front/css/saraylar.css -> Css yapısı<br />
+front/js/script.js & script1.js -> Jquery yapısı<br />
 front/ -> Özkaynaklar
