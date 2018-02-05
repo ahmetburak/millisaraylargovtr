@@ -2,9 +2,9 @@
 MilliSaraylar.gov.tr
 
 
-Dökümantasyon
+Dökümantasyon__
 
-resources/views/front -> View ünitesi
+resources/views/front -> View ünitesi__
 app/Http/Controllers/Front -> Controller ünitesi
 app -> Model ünitesi
 routes -> Yönlendirmeler
