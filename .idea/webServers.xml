@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5617f436-b907-4106-aa14-da9e7ff4626c" name="Localrepo" url="http://localhost">
+        <fileTransfer port="0" mountedRoot="$USER_HOME$/Desktop/MS_repo/millisaraylargovtr" accessType="MOUNT" />
+      </webServer>
+    </option>
+  </component>
+</project>
