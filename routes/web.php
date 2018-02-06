@@ -40,6 +40,7 @@ Route::get('ihale/{slug}','Front\FrontController@ihale')->name("ihale");
 Route::get('ihaleler/','Front\FrontController@ihaleler')->name("ihaleler");
 Route::get('etkinlikler/{slug}','Front\FrontController@etkinlik')->name("etkinlik");
 Route::get('magazalarimiz/','Front\FrontController@magazalarimiz')->name("magazalarimiz");
+Route::get('magaza/{slug}','Front\FrontController@magaza')->name("magaza");
 
 
 

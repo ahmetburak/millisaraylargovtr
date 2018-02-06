@@ -909,80 +909,13 @@ class FrontController extends Controller
 
     }
 
-    public function magaza(Request $request, $slug){
-        // $id = $request->query->get("id");
-        // $id = $request->request->get("id");
-        // $id = $request->input("id");
-
-        $post_contentpages = Events::query()
-            ->where("id", $slug)
-            ->first();
-
-        $post_CP= $post_contentpages->content_tr;
-        $post__CP=Explode('fafewfeafgeraggefeefaef3434', $post_CP);
-        $post__CP = str_replace('<h4>','<br><br><h4>',$post__CP);
-
-
-
-        $post_events = Events::query()
-            ->where("slug", $slug)
-            ->take(4)
-            ->get();
-
-        $post_galleries = Galleries::query()
-            ->where("slug", $slug)
-            ->first();
-
-        $post_koleksiyonlar = koleksiyonlar::query()
-            ->where("slug", $slug)
-            ->get();
-
-        $post_galleries_slider = Galleries::query()
-            ->where("slug", "tarihisahsiyetler")
-            ->inRandomOrder()
-            ->take(7)
-            ->get();
-
-        $post_ = koleksiyonlar::query()
-            ->where("slug", $slug)
-            ->get();
-
-
-        $post_visittimes = VisitTimes::query()
-            ->where("slug", $slug)
-            ->first();
-
-        $post_sliders = Sliders::query()
-            ->where("slug", $slug)
-            ->take(3)
-            ->get();
-
-
-
-        //dd($post_events);
-
-        $datas = [
-            "post_contentpages" => $post_contentpages,
-            "post_events" => $post_events,
-            "post_galleries" => $post_galleries,
-            "post_galleries_slider" => $post_galleries_slider,
-            "post_visittimes" => $post_visittimes,
-            "post_sliders" => $post_sliders,
-            "post__CP" => $post__CP,
-            "post_koleksiyonlar" => $post_koleksiyonlar
-
-        ];
-        return view("front.etkinlik.main", $datas);
-
-    }
-
     public function magazalarimiz(Request $request){
         // $id = $request->query->get("id");
         // $id = $request->request->get("id");
         // $id = $request->input("id");
 
         $post_contentpages = ContentPages::query()
-            ->where("slug", "magaza")
+            ->where("slug", "magazalar")
             ->first();
 
 
@@ -999,6 +932,31 @@ class FrontController extends Controller
 
         ];
         return view("front.magazalar.main", $datas);
+
+    }
+
+    public function magaza(Request $request, $slug){
+        // $id = $request->query->get("id");
+        // $id = $request->request->get("id");
+        // $id = $request->input("id");
+
+        $post_shop = Shop::query()
+            ->where("slug", $slug)
+            ->Paginate(12);
+
+
+        $slug_txt=$slug;
+
+
+
+        $datas = [
+            "post_shop" => $post_shop,
+            "slug_txt" => $slug_txt,
+
+
+
+        ];
+        return view("front.magaza.main", $datas);
 
     }
 
