@@ -10,10 +10,9 @@
 
 <style>
 
-    section#announcement {
 
-        margin-top: -10px !important;
-    }
+
+
 
     section#announcement .announcement-item-content {
         height: 100px !important;
@@ -21,7 +20,19 @@
     }
 
     section#announcement .announcement-item-content .announcement-item-content-text {
-        padding: 13px 5px;
+
+    }
+
+    section.activities {
+
+        margin-top: -10px !important;
+    }
+
+    @media only screen and (max-width: 992px) {
+        section.activities {
+
+            margin-top: -1px !important;
+        }
     }
 
     .announcement-item-content {
@@ -35,10 +46,7 @@
         left: 0px !important;
     }
 
-    section#announcement {
 
-        margin-top: -10px !important;
-    }
 
     .announcement-item-content {
         height: 30px !important;
@@ -176,11 +184,41 @@
         height: 250px !important;
         text-align: center;
         padding-top: 15px;
+
+    }
+    .announcement-item-image > img {
+        max-width: 280px;
+        min-height: 100px;
+
     }
 
 
 
+
+
 </style>
+
+
+@if ($slug_txt==="hediyelik-urunler")
+    <style>
+        .announcement-item-image {
+
+            height: unset !important;
+
+            padding-top: unset !important;
+            width: 200px !important;
+        }
+
+        .announcement-item-image > img {
+            width: 280px;
+            height: 180px;
+
+        }
+    </style>
+@endif
+
+
+
 
 
 
@@ -246,7 +284,7 @@
                         <div class="announcement-item-content">
                             <div class="announcement-item-content-text">
                                 {{ $post->title_tr }}
-                                <br>
+                            <br>
                                 {!!  $post->fiyat_b  !!}
 
 
@@ -355,7 +393,7 @@
 
         </div><!-- end .row -->
 
-
+        <div class="paginationcontainer"> {{ $post_shop->links() }}</div>
         <!-- end .row -->
     </div><!-- end .container-fluid -->
 </section>

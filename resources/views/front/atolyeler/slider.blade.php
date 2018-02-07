@@ -5,7 +5,7 @@
 <?php $a++;?>
 @endforeach
 <?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
-{{ $a }}
+
 
     <!-- start section#slider -->
 

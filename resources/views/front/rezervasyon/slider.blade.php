@@ -7,6 +7,9 @@
  */
 ?>
 
+
+<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 <!-- start section#slider -->
 <section id="slider">
     <div class="container-fluid">
@@ -14,7 +17,7 @@
             <div class="owl-carousel main-slider">
 
 
-                <div class="slider-item" style="background-image:url('front/images/Banner/mainslider1.jpg');">
+                <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Banner/mainslider1.jpg');">
                     <div class="slider-item-title" data-animation-in="flipInY"
                          data-animation-out="animate-out fadeOutUp">
                         <div class="slider-item-title-first">DOLMABAHÇE SARAYI'nı</div>
@@ -32,7 +35,7 @@
                     </div><!-- end .slider-image -->
                 </div><!-- end .slider-item -->
 
-                <div class="slider-item" style="background-image:url('front/images/Banner/mainslider2.jpg');">
+                <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Banner/mainslider2.jpg');">
                     <div class="slider-item-title" data-animation-in="flipInY"
                          data-animation-out="animate-out fadeOutUp">
                         <div class="slider-item-title-first">BEYLERBEYİ SARAYI</div>
@@ -50,7 +53,7 @@
                     </div><!-- end .slider-image -->
                 </div><!-- end .slider-item -->
 
-                <div class="slider-item" style="background-image:url('front/images/Banner/mainslider3.jpg');">
+                <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Banner/mainslider3.jpg');">
                     <div class="slider-item-title" data-animation-in="flipInY"
                          data-animation-out="animate-out fadeOutUp">
                         <div class="slider-item-title-first">YILDIZ SARAYI ŞALE'Yİ</div>
@@ -73,5 +76,3 @@
     </div><!-- end .container -->
 </section>
 <!-- end section#slider -->
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
-<script src="<?PHP echo $path;?>front/js/script.js"></script>

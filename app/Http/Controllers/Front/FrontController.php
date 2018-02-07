@@ -33,9 +33,13 @@ class FrontController extends Controller
             ->take(4)
             ->get();
 
+        $post_shop = Shop::inRandomOrder()
+            ->take(12)
+            ->get();
 
         $datas = [
-            "post_etkinlik" => $post_etkinlik
+            "post_etkinlik" => $post_etkinlik,
+            "post_shop" => $post_shop
 
 
         ];
@@ -100,14 +104,17 @@ class FrontController extends Controller
         $post_contentpages = ContentPages::query()
             ->where("slug", 'ziyaret-bilgileri')
             ->first();
-        $post_CP= $post_contentpages->content_tr;
-        $post__CP=Explode('<br>', $post_CP);
+
+
+        $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
+
 
 
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post__CP" => $post__CP
+            "post_contentpages1" => $post_contentpages1
+
 
 
         ];
@@ -124,8 +131,12 @@ class FrontController extends Controller
             ->where("slug", $slug)
             ->first();
 
-        $post_CP= $post_contentpages->content_tr;
-        $post__CP=Explode('<br>', $post_CP);
+        $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
+
+
+
+
+
 
         $post_events = Events::query()
             ->where("slug", $slug)
@@ -157,12 +168,13 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
+            "post_contentpages1" => $post_contentpages1,
             "post_events" => $post_events,
             "post_galleries" => $post_galleries,
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
-            "post_sliders" => $post_sliders,
-            "post__CP" => $post__CP
+            "post_sliders" => $post_sliders
+
 
         ];
         return view("front.gezirehberi.main", $datas);
@@ -184,8 +196,15 @@ class FrontController extends Controller
             ->where("slug", $slug)
             ->first();
 
-        $post_CP= $post_contentpages->content_tr;
-        $post__CP=Explode('<br>', $post_CP);
+
+
+
+        $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
+
+
+
+
+
 
         $post_events = Events::query()
             ->where("slug", $slug)
@@ -217,13 +236,14 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
+            "post_contentpages1" => $post_contentpages1,
             "post_events" => $post_events,
             "post_events_yayinlar" => $post_events_yayinlar,
             "post_galleries" => $post_galleries,
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
-            "post__CP" => $post__CP
+
 
         ];
         return view("front.saraylar.main", $datas);
@@ -239,8 +259,7 @@ class FrontController extends Controller
             ->where("slug", $slug)
             ->first();
 
-        $post_CP= $post_contentpages->content_tr;
-        $post__CP=Explode('<br>', $post_CP);
+        $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
 
         $post_events = Events::query()
             ->where("slug", $slug)
@@ -272,12 +291,13 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
+            "post_contentpages1" => $post_contentpages1,
             "post_events" => $post_events,
             "post_galleries" => $post_galleries,
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
-            "post_sliders" => $post_sliders,
-            "post__CP" => $post__CP
+            "post_sliders" => $post_sliders
+
 
         ];
         return view("front.fabrikalar.main", $datas);
@@ -918,6 +938,9 @@ class FrontController extends Controller
             ->where("slug", "magazalar")
             ->first();
 
+        $post_contentpages1 = str_replace('<br>','<br>',$post_contentpages->content_tr);
+
+
 
         $post_magazalar = Magazalar::query()
             ->get();
@@ -926,6 +949,7 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
+            "post_contentpages1" => $post_contentpages1,
             "post_magazalar" => $post_magazalar,
 
 
@@ -942,7 +966,7 @@ class FrontController extends Controller
 
         $post_shop = Shop::query()
             ->where("slug", $slug)
-            ->Paginate(12);
+            ->Paginate(20);
 
 
         $slug_txt=$slug;
@@ -960,14 +984,52 @@ class FrontController extends Controller
 
     }
 
+    public function bilet(Request $request){
+        // $id = $request->query->get("id");
+        // $id = $request->request->get("id");
+        // $id = $request->input("id");
 
-    public function test(Request $request,$name) {
+        $post_contentpages = ContentPages::query()
+            ->where("slug", 'hakkimizda')
+            ->first();
+        $post_CP= $post_contentpages->content_tr;
+        $post__CP=Explode('<br>', $post_CP);
+
+
 
         $datas = [
-            "isim" => "emre",
-            "yazar" => "burak"
-        ];
+            "post_contentpages" => $post_contentpages,
+            "post__CP" => $post__CP
 
-        return view("front.about.main",$datas);
+
+        ];
+        return view("front.bilet.main", $datas);
+
     }
+
+
+    public function rezervasyon(Request $request){
+        // $id = $request->query->get("id");
+        // $id = $request->request->get("id");
+        // $id = $request->input("id");
+
+        $post_contentpages = ContentPages::query()
+            ->where("slug", 'hakkimizda')
+            ->first();
+        $post_CP= $post_contentpages->content_tr;
+        $post__CP=Explode('<br>', $post_CP);
+
+
+
+        $datas = [
+            "post_contentpages" => $post_contentpages,
+            "post__CP" => $post__CP
+
+
+        ];
+        return view("front.rezervasyon.main", $datas);
+
+    }
+
+
 }

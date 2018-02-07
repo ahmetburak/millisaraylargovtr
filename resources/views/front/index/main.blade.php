@@ -20,8 +20,11 @@
 
 @section("content")
     @include("front.index.actual")
+
     @include("front.index.announcement")
+
     @include("front.index.member")
+
     @include("front.index.store")
 @endsection
 

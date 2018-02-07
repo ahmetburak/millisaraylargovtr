@@ -23,7 +23,7 @@
                 <div class="hours-info-box-icon">
                     <i class="fa  fa-ticket" aria-hidden="true"></i>
                 </div><!-- end .hours-info-box-icon -->
-                <span>Milli Saraylar Genel Sekreterliğine Bağlı Birimlerde Gezi Biletlerine Ait Ücretler</span>
+                <span>Milli Saraylar Genel Sekreterliğine Bağlı Birimlerde Gezi Bileti Ücretleri</span>
             </div><!-- end .hours-info-box-->
 
             <div class="col-md-12 hours-box">

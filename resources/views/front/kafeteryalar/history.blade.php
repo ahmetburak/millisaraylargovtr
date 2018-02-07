@@ -10,6 +10,16 @@
 
     }
 
+    @media only screen and (max-width: 1111px) {
+
+        .koleksiyonlarimaj2>img {
+
+            max-width: 350px;
+            float: left;
+
+        }
+    }
+
     #place-map > div.place-map-top {
         top: 1px !important;
     }

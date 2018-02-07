@@ -13,7 +13,7 @@ $(window).on("load", function () {
 
     var a = $(".store-items");
     a.owlCarousel({
-        items: 3,
+        items: 5,
         margin: 10,
         autoHeight: !1,
         responsiveClass: !0,
@@ -26,8 +26,9 @@ $(window).on("load", function () {
         responsive: {
             0: {items: 1, nav: !0},
             768: {items: 2, nav: !1},
-            992: {items: 3, nav: !0, loop: !1},
-            1100: {items: 3, nav: !0, loop: !1}
+            992: {items: 5, nav: !0, loop: !1},
+            1100: {items: 5, nav: !0, loop: !1}
+
         }
     });
     var o = $(".main-slider");

@@ -144,7 +144,7 @@
                             <li><a href="<?PHP echo $path; ?>hizmetler/klasik-turk-sanatlari-merkezi">Klasik Türk Sanatları Merkezi</a></li>
                         </ul>
                     </li>
-                    <li><a href="<?PHP echo $path; ?>sanaltur/" class="sc-navbar-toggle">Sanal Tur</a></li>
+                    <li><a href="<?PHP echo $path; ?>ihaleler/" class="sc-navbar-toggle">Sanal Tur</a></li>
                     <li><a href="<?PHP echo $path; ?>ihaleler/" class="sc-navbar-toggle">İhale ve Mevzuat</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->

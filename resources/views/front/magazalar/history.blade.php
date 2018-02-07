@@ -40,7 +40,16 @@
             <div class="col-md-2 "></div>
                         <div class="col-md-8 ">
 
-                            <span class="content">{!! $post_contentpages->content_tr !!}</span>
+
+                            <div class="contentpages" data-index="2">
+
+                                <br>
+                                <p>
+
+                                    {!!html_entity_decode($post_contentpages1)!!}
+
+                                </p>
+                            </div>
 
 
                            <!-- <div class="row">

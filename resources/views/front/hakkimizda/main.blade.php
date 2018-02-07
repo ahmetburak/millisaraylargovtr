@@ -6,7 +6,7 @@
  * Time: 11:30
  */
 ?>
-@extends('layouts.front1')
+@extends('layouts.front')
 
 @section("slider")
     @include("front.hakkimizda.slider")

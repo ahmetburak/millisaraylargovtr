@@ -7,6 +7,15 @@
     #slider > div > div > div > div.owl-stage-outer > div{
         padding-top: 100px !important;
     }
+
+
+    @media only screen and (max-width: 992px) {
+        #slider > div > div > div > div.owl-stage-outer > div{
+            padding-top: 0px !important;
+        }
+    }
+
+
 </style>
 
 

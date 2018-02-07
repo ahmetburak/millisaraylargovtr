@@ -1,5 +1,7 @@
+/*
 @import 'https://fonts.googleapis.com/css?family=Raleway';
 @import 'https://fonts.googleapis.com/css?family=Barlow|Nunito|Source+Sans+Pro';
+*/
 
 #bs-example-navbar-collapse-1 > ul > li.dropdown.open > ul{
     width: 350px !important;
@@ -18,13 +20,6 @@ ul, li {
     list-style-type: none
 }
 
-@font-face {
-    font-family: 'Marion';
-    src: url("../fonts/Marion.eot");
-    src: url("../fonts/Marion.eot?#iefix") format("embedded-opentype"), url("../fonts/Marion.woff2") format("woff2"), url("../fonts/Marion.woff") format("woff"), url("../fonts/Marion.ttf") format("truetype"), url("../fonts/Marion.svg#Marion") format("svg");
-    font-weight: normal;
-    font-style: normal
-}
 
 html, body {
     height: 100%;
@@ -34,7 +29,7 @@ html, body {
 
 body {
     color: #241E1E;
-    font-family: 'Source Sans Pro', sans-serif;
+
     overflow-x: hidden;
     position: relative;
     margin: 0;

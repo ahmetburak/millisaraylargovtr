@@ -9,11 +9,11 @@
 @extends('layouts.front')
 
 @section("slider")
-    @include("front.magazalar.slider")
+    @include("front.rezervasyon.slider")
 @endsection
 
 @section("content")
-    @include("front.magazalar.news")
+    @include("front.rezervasyon.history")
 
 
 @endsection

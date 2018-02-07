@@ -41,10 +41,11 @@ Route::get('ihaleler/','Front\FrontController@ihaleler')->name("ihaleler");
 Route::get('etkinlikler/{slug}','Front\FrontController@etkinlik')->name("etkinlik");
 Route::get('magazalarimiz/','Front\FrontController@magazalarimiz')->name("magazalarimiz");
 Route::get('magaza/{slug}','Front\FrontController@magaza')->name("magaza");
+Route::get('e-bilet/','Front\FrontController@bilet')->name("bilet");
+Route::get('rezervasyon/','Front\FrontController@rezervasyon')->name("rezervasyon");
 
 
 
 
 
 
-Route::get('/emre/{name}','Front\FrontController@test')->name("isimler");
