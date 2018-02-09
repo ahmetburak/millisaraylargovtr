@@ -43,6 +43,7 @@ Route::get('magazalarimiz/','Front\FrontController@magazalarimiz')->name("magaza
 Route::get('magaza/{slug}','Front\FrontController@magaza')->name("magaza");
 Route::get('e-bilet/','Front\FrontController@bilet')->name("bilet");
 Route::get('rezervasyon/','Front\FrontController@rezervasyon')->name("rezervasyon");
+Route::get('sanal-tur/{slug}','Front\FrontController@sanaltur')->name("sanaltur");
 
 
 

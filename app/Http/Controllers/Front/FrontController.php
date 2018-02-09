@@ -8,6 +8,7 @@ use App\koleksiyonlar;
 use App\Magazalar;
 use App\Shop;
 use App\Yayinlar;
+use App\sanaltur;
 
 
 use App\Events;
@@ -37,11 +38,14 @@ class FrontController extends Controller
             ->take(12)
             ->get();
 
+        $post_slider_item = Sliders::query()
+            ->take(3)
+            ->get();
+
         $datas = [
             "post_etkinlik" => $post_etkinlik,
+            "post_slider_item" => $post_slider_item,
             "post_shop" => $post_shop
-
-
         ];
 
 
@@ -1007,7 +1011,6 @@ class FrontController extends Controller
 
     }
 
-
     public function rezervasyon(Request $request){
         // $id = $request->query->get("id");
         // $id = $request->request->get("id");
@@ -1030,6 +1033,32 @@ class FrontController extends Controller
         return view("front.rezervasyon.main", $datas);
 
     }
+
+    public function sanaltur(Request $request, $slug){
+        // $id = $request->query->get("id");
+        // $id = $request->request->get("id");
+        // $id = $request->input("id");
+
+        $post_sanaltur = sanaltur::query()
+            ->where("slug", $slug)
+            ->get();
+
+
+        $slug_txt=$slug;
+
+
+
+        $datas = [
+            "post_sanaltur" => $post_sanaltur,
+            "slug_txt" => $slug_txt,
+
+
+
+        ];
+        return view("front.sanaltur.main", $datas);
+
+    }
+
 
 
 }

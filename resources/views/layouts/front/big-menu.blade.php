@@ -190,7 +190,20 @@
                         <li><a href="<?PHP echo $path; ?>hizmetler/klasik-turk-sanatlari-merkezi">Klasik Türk Sanatları Merkezi</a></li>
                     </ul>
                 </li>
-                <li><a href="<?PHP echo $path; ?>sanaltur/" class="smenu mresponsive">Sanal Tur</a></li>
+
+
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle sc-navbar-toggle" data-toggle="dropdown" role="button"
+                       aria-haspopup="true" aria-expanded="false">Sanal Tur<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?PHP echo $path; ?>sanal-tur/dolmabahce-sarayi">Dolmabahçe Sarayı</a></li>
+                        <li><a href="<?PHP echo $path; ?>sanal-tur/beylerbeyi-sarayi">Beylerbeyi Sarayı</a></li>
+                        <li><a href="<?PHP echo $path; ?>sanal-tur/ayvalikavak-kasri">Ayvalıkavak Kasrı</a></li>
+                        <li><a href="<?PHP echo $path; ?>sanal-tur/kucuksu-kasri">Küçüksu Kasrı</a></li>
+                        <li><a href="<?PHP echo $path; ?>sanal-tur/ihlamur-kasirlari">Ihlamur Kasırları</a></li>
+                        <li><a href="<?PHP echo $path; ?>sanal-tur/yildiz-sarayi-sale">Yıldız Sarayı</a></li>
+                    </ul>
+                </li>
 
 
                 <li><a href="<?PHP echo $path; ?>ihaleler/" class="smenu mresponsive">İhale ve Mevzuat</a></li>

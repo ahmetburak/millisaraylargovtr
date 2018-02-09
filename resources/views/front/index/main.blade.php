@@ -7,11 +7,6 @@
  */
 ?>
 
-
-
-
-
-
 @extends('layouts.front')
 
 @section("slider")

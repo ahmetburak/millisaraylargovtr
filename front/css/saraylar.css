@@ -707,7 +707,8 @@ section#slider .main-slider .slider-item .slider-item-title .slider-item-title-t
     background-repeat: no-repeat;
     position: relative;
     left: 250px;
-    top: 40px
+    top: 40px;
+
 }
 
 section#slider .main-slider .slider-item .slider-item-title .slider-item-title-third:hover {

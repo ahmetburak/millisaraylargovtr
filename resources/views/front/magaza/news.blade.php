@@ -201,6 +201,15 @@
 
 @if ($slug_txt==="hediyelik-urunler")
     <style>
+
+        section#announcement .announcement-item-title-alt{
+        max-width: 272px;
+        }
+
+        .announcement-item-content {
+            max-width: 280px !important;
+        }
+
         .announcement-item-image {
 
             height: unset !important;
@@ -263,7 +272,7 @@
                     <?php $i++; ?>
 
                 <!---start Haber--->
-                <div class="col-md-3 col-sm-6 col-xs-12" id="haber<?php echo $i; ?>" >
+                <div class="col-md-3 col-sm-4 col-xs-12" id="haber<?php echo $i; ?>" >
                     <div class="announcement-item">
                         <div class="announcement-item-title-alt">
 
