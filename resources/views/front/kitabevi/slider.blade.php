@@ -1,7 +1,7 @@
 
 <!-- start section#slider -->
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 <style>
     #slider > div > div > div > div.owl-stage-outer > div{
@@ -33,7 +33,7 @@
             @foreach ($post_sliders as $post)
 
 
-                    <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Saraylar/{{ $post->url }}');">
+                    <div class="slider-item" style="background-image:url('{{ config("parameters.saray_url") }}front/images/Saraylar/{{ $post->url }}');">
                         <div class="slider-item-image">
 
 

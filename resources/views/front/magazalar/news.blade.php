@@ -5,7 +5,7 @@
 @endforeach
 
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 <style>
@@ -244,7 +244,7 @@
 
 
             <div class="container">
-                <a href="<?PHP echo $path; ?>magaza/hediyelik-urunler" id="hakkimizdamenu"> <img src="<?PHP echo $path; ?>front/images/hkmenu1.png">&nbsp;&nbsp;
+                <a href="{{ config("parameters.saray_url") }}magaza/hediyelik-urunler" id="hakkimizdamenu"> <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
                     Hediyelik Ürünler
                 </a>
                 <div class="overlay1">
@@ -252,7 +252,7 @@
                 </div>
             </div>
             <div class="container">
-                <a href="<?PHP echo $path; ?>magaza/yildiz-porselen-urunleri" id="hakkimizdamenu"> <img src="<?PHP echo $path; ?>front/images/hkmenu1.png">&nbsp;&nbsp;
+                <a href="{{ config("parameters.saray_url") }}magaza/yildiz-porselen-urunleri" id="hakkimizdamenu"> <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
                     Yıldız Porselen Ürünleri
                 </a>
                 <div class="overlay1">

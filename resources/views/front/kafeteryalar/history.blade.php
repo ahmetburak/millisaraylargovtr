@@ -48,7 +48,7 @@
                         @foreach ($post_galleries_slider as $post)
 
 
-                                <img src="<?PHP echo $path; ?>front/images/kafeteryalar/{{ $post->url }}"/>
+                                <img src="{{ config("parameters.saray_url") }}front/images/kafeteryalar/{{ $post->url }}"/>
 
 
 

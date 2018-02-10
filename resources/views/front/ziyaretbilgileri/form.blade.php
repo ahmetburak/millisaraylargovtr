@@ -1,5 +1,5 @@
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 <style>
 

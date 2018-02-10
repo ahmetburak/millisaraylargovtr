@@ -1,7 +1,7 @@
 
 <!-- start section#slider -->
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 <section id="slider">
@@ -18,7 +18,7 @@
             @foreach ($post_galleries_slider as $post)
 
 
-                    <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Koleksiyonlar/{{ $post->url }}');">
+                    <div class="slider-item" style="background-image:url('{{ config("parameters.saray_url") }}front/images/Koleksiyonlar/{{ $post->url }}');">
                         <div class="slider-item-image">
 
 

@@ -91,7 +91,7 @@
 
 
                                 <div><h4><span class="bgok1">&nbsp;&nbsp;&nbsp;</span>
-                                <a href="<?PHP echo $path; ?>ihale/{{ $post->id }}">
+                                <a href="{{ config("parameters.saray_url") }}ihale/{{ $post->id }}">
                                     {{ $post->title_tr }}
                                 </a>
                                 </div><br>

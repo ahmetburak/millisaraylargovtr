@@ -33,7 +33,7 @@
                         <div class="col-md-4 koleksiyonlarimaj2">
 
 
-                            <img src="<?PHP echo $path; ?>front/images/Saraylar/{{ $post_galleries->url }}"/>
+                            <img src="{{ config("parameters.saray_url") }}front/images/Saraylar/{{ $post_galleries->url }}"/>
                         </div>
 
 

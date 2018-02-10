@@ -1,4 +1,4 @@
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 
@@ -39,7 +39,7 @@
                                     <div class="col-md-4 koleksiyonlarimaj">
                             @endif
 
-                                <img src="<?PHP echo $path; ?>front/images/Tarihisahsiyetler/{{ $post_galleries->url }}" />
+                                <img src="{{ config("parameters.saray_url") }}front/images/Tarihisahsiyetler/{{ $post_galleries->url }}" />
                             </div>
 
 

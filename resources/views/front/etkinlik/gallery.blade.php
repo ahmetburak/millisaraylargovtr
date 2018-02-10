@@ -15,7 +15,7 @@
     <?php $a++;?>
 @endforeach
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 @if( !empty($a))
 
@@ -47,8 +47,8 @@
                     @foreach ($post_galleries as $post)
                     <?php $i++; ?>
 
-                    <a href="<?PHP echo $path; ?>front/images/Koleksiyonlar/{{ $post->url }}" id="resim<?php echo $i; ?>" class="swipeboxExampleImg" rel='gal'>
-                        <img src="<?PHP echo $path; ?>front/images/Koleksiyonlar/{{ $post->url }}" />
+                    <a href="{{ config("parameters.saray_url") }}front/images/Koleksiyonlar/{{ $post->url }}" id="resim<?php echo $i; ?>" class="swipeboxExampleImg" rel='gal'>
+                        <img src="{{ config("parameters.saray_url") }}front/images/Koleksiyonlar/{{ $post->url }}" />
                     </a>
 
 

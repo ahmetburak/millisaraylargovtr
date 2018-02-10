@@ -5,7 +5,7 @@
 @endforeach
 
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 
@@ -48,7 +48,7 @@
                         </div>
                         <div class="announcement-item-image">
                             <a href="#" class="announcement-item-image-link">
-                                <img src="<?PHP echo $path; ?>front/images/Haberler/{{ $post->imagesurl }}" class="img-responsive" alt="">
+                                <img src="{{ config("parameters.saray_url") }}front/images/Haberler/{{ $post->imagesurl }}" class="img-responsive" alt="">
 
 
 

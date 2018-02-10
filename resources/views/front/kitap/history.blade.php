@@ -1,4 +1,4 @@
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 <style>
@@ -41,7 +41,7 @@
 
 
                                 <div class="col-md-4 kitaplarimaj">
-                                <img src="<?PHP echo $path; ?>front/images/Yayinlar/{{ $post_contentpages->imageurl }}" />
+                                <img src="{{ config("parameters.saray_url") }}front/images/Yayinlar/{{ $post_contentpages->imageurl }}" />
                             </div>
 
 
@@ -57,7 +57,7 @@
                                     {!!  $post_contentpages->description_tr !!}
 
                                     <br><br>
-                                <h4><a href="<?PHP echo $path; ?>yayinlar/kitaplar" class="announcement-item-image-link">Geri Dön</a> </h4>
+                                <h4><a href="{{ config("parameters.saray_url") }}yayinlar/kitaplar" class="announcement-item-image-link">Geri Dön</a> </h4>
 
                                 </p>
                             </div>

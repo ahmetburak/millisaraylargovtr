@@ -14,12 +14,12 @@
 
                 @foreach ($post_slider_item as $post)
 
-                    <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Banner/{{ $post->url }}');">
+                    <div class="slider-item" style="background-image:url('{{ config("parameters.saray_url") }}front/images/Banner/{{ $post->url }}');">
                         <div class="slider-item-title" data-animation-in="flipInY" data-animation-out="animate-out fadeOutUp">
                             <div class="slider-item-title-first">{{ $post->text1 }}</div>
                             <div class="slider-item-title-second">{{ $post->text2 }}</div>
                             <div class="slider-item-title-third" data-animation-in="flipInY" data-animation-out="animate-out fadeOutUp">
-                                <a href="<?PHP echo $path; ?>{{ $post->link }}" class="slider-item-title-link">
+                                <a href="{{ config("parameters.saray_url") }}{{ $post->link }}" class="slider-item-title-link">
                                    {{ $post->linktext }}
                                 </a>
                             </div>

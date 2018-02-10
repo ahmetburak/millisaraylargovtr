@@ -6,7 +6,7 @@
  * Time: 11:35
  */
 ?>
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 <style>
@@ -49,11 +49,11 @@
                     <div class="store-title-links">
                         <ul class="store-title-links-list">
                             <li class="store-title-links-list-li">
-                                <a href="<?PHP echo $path; ?>magaza/hediyelik-urunler" class="store-title-links-list-link">Hediyelik Ürünler</a></li>
+                                <a href="{{ config("parameters.saray_url") }}magaza/hediyelik-urunler" class="store-title-links-list-link">Hediyelik Ürünler</a></li>
                             <li class="store-title-links-list-li">
-                                <a href="<?PHP echo $path; ?>magaza/yildiz-porselen-urunleri" class="store-title-links-list-link">Yıldız Porselen Ürünleri</a></li>
+                                <a href="{{ config("parameters.saray_url") }}magaza/yildiz-porselen-urunleri" class="store-title-links-list-link">Yıldız Porselen Ürünleri</a></li>
                             <li class="store-title-links-list-li">
-                                <a href="<?PHP echo $path; ?>magazalarimiz/" class="store-title-links-list-link">Mağazalarımız</a></li>
+                                <a href="{{ config("parameters.saray_url") }}magazalarimiz/" class="store-title-links-list-link">Mağazalarımız</a></li>
                         </ul>
                     </div><!-- end .store-title-links -->
                 </div><!-- end .store-title-top -->
@@ -84,11 +84,11 @@
 
                             @if ($post->slug==="hediyelik-urunler")
 
-                            <img src="<?PHP echo $path; ?>front/images/magazalar/urunler/{{$post->url}}" alt="">
+                            <img src="{{ config("parameters.saray_url") }}front/images/magazalar/urunler/{{$post->url}}" alt="">
 
                             @elseif ($post->slug==="yildiz-porselen-urunleri")
 
-                            <img src="<?PHP echo $path; ?>front/images/magazalar/urunler/yildizporselen/{{$post->url}}" alt="">
+                            <img src="{{ config("parameters.saray_url") }}front/images/magazalar/urunler/yildizporselen/{{$post->url}}" alt="">
 
                             @endif
 
@@ -104,11 +104,11 @@
 
                             @if ($post->slug==="hediyelik-urunler")
 
-                                <a href="<?PHP echo $path; ?>magaza/hediyelik-urunler" class="store-item-link">Mağazaya Git</a>
+                                <a href="{{ config("parameters.saray_url") }}magaza/hediyelik-urunler" class="store-item-link">Mağazaya Git</a>
 
                             @elseif ($post->slug==="yildiz-porselen-urunleri")
 
-                                <a href="<?PHP echo $path; ?>magaza/yildiz-porselen-urunleri" class="store-item-link">Mağazaya Git</a>
+                                <a href="{{ config("parameters.saray_url") }}magaza/yildiz-porselen-urunleri" class="store-item-link">Mağazaya Git</a>
 
                             @endif
 

@@ -1,5 +1,7 @@
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
+
+
 
 <style>
 
@@ -30,8 +32,6 @@
 </style>
 
 
-
-
     <!-- start section#place-images -->
     <section id="place-images">
         <div class="place-images-top"></div>
@@ -56,26 +56,27 @@
 
                     <div class="col-md-12 hours-box">
 
-                        <ul class="hours-box-list">
+                        <ul class="hours-box-list row">
 
 
                             <form>
+                                <div class="container">
+                                    <div class="row">
 
-
-                                <div class="form-group col-xs-4">
+                                <div class="form-group col-lg-4 col-xs-12">
                                     <label for="exampleInputEmail1">Ad Soyad</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" width="200px">
                                     <small id="emailHelp" class="form-text text-muted">Bütün bilgileriniz gizli tutulacaktır.</small>
                                 </div>
 
-                                <div class="form-group col-xs-4">
+                                <div class="form-group col-lg-4 col-xs-12">
                                     <label for="exampleInputEmail1">Email address</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                     <small id="emailHelp" class="form-text text-muted">Mesajınız cevaplandığında size mail olarak dönülecektir.</small>
 
                                 </div>
 
-                                <div class="form-group col-xs-4">
+                                <div class="form-group col-lg-4 col-xs-12">
                                     <label for="exampleInputEmail1">Telefon</label>
                                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                                     <small id="emailHelp" class="form-text text-muted">Telefon bilgisi girmek zorunlu değildir.</small>
@@ -89,6 +90,8 @@
                                 <div class="form-group col-xs-12">
                                     <button type="submit" class="btn btn-default">Kaydet ve Gönder</button>
                                 </div>
+
+                                    </div></div>
 
 
 

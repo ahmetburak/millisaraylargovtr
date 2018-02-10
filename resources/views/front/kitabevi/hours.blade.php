@@ -1,6 +1,6 @@
 
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 <!-- start section#hours -->
@@ -22,7 +22,7 @@
                 <?php $i++; ?>
                     <divvv class="row">
                     <div class="col-md-4 koleksiyonlarimaj">
-                    <img src="<?PHP echo $path; ?>front/images/Koleksiyonlar/{{ $post->imageurl }}" />
+                    <img src="{{ config("parameters.saray_url") }}front/images/Koleksiyonlar/{{ $post->imageurl }}" />
                     </div>
 
                     <div class="col-md-8">

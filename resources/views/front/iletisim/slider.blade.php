@@ -73,5 +73,5 @@
     </div><!-- end .container -->
 </section>
 <!-- end section#slider -->
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 <script src="<?PHP echo $path;?>front/js/script.js"></script>

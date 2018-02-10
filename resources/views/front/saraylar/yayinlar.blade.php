@@ -7,7 +7,7 @@
 @endforeach
 
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 
@@ -49,21 +49,21 @@
 
                         </div>
                         <div class="announcement-item-image ">
-                            <a href="<?PHP echo $path; ?>Pdf/{{ $post->url }}" class="announcement-item-image-link" target="_blank">
-                                <img src="<?PHP echo $path; ?>front/images/Yayinlar/{{ $post->imageurl }}" class="img-responsive " alt="" >
+                            <a href="{{ config("parameters.saray_url") }}Pdf/{{ $post->url }}" class="announcement-item-image-link" target="_blank">
+                                <img src="{{ config("parameters.saray_url") }}front/images/Yayinlar/{{ $post->imageurl }}" class="img-responsive " alt="" >
                             </a>
                         </div>
 
                         <div class="announcement-item-image ">
-                            <a href="<?PHP echo $path; ?>yayinlar/kitaplar/{{ $post->id }}" class="announcement-item-image-link">
-                                <img src="<?PHP echo $path; ?>front/images/Yayinlar/{{ $post->imageurl }}" class="img-responsive " alt="" >
+                            <a href="{{ config("parameters.saray_url") }}yayinlar/kitaplar/{{ $post->id }}" class="announcement-item-image-link">
+                                <img src="{{ config("parameters.saray_url") }}front/images/Yayinlar/{{ $post->imageurl }}" class="img-responsive " alt="" >
                             </a>
                         </div>
 
                         <div class="announcement-item-content">
 
-                            <div class="indirbtn"><a href="<?PHP echo $path; ?>Pdf/{{ $post->url }}" class="announcement-item-more" target="_blank">{{ $post->title_tr }} >> İndir</a></div>
-                            <div class="kitaplartxt"><a href="<?PHP echo $path; ?>front/images/Yayinlar/Pdf/{{ $post->url }}" class="announcement-item-more" target="_blank">{{ $post->title_tr }} </a></div>
+                            <div class="indirbtn"><a href="{{ config("parameters.saray_url") }}Pdf/{{ $post->url }}" class="announcement-item-more" target="_blank">{{ $post->title_tr }} >> İndir</a></div>
+                            <div class="kitaplartxt"><a href="{{ config("parameters.saray_url") }}front/images/Yayinlar/Pdf/{{ $post->url }}" class="announcement-item-more" target="_blank">{{ $post->title_tr }} </a></div>
                         </div>
                     </div>
                 </div>

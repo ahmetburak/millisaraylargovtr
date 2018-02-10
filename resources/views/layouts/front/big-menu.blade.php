@@ -193,7 +193,7 @@
 
 
                 <li class="dropdown">
-                    <a href="" class="dropdown-toggle sc-navbar-toggle" data-toggle="dropdown" role="button"
+                    <a href="" class="smenu mresponsive" data-toggle="dropdown" role="button"
                        aria-haspopup="true" aria-expanded="false">Sanal Tur<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="<?PHP echo $path; ?>sanal-tur/dolmabahce-sarayi">Dolmabahçe Sarayı</a></li>

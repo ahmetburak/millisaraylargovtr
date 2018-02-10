@@ -1,4 +1,4 @@
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
 
@@ -49,8 +49,8 @@
 
 
                             <div class="container">
-                                <a href="<?PHP echo $path; ?>gezi-rehberi/esaslar" id="hakkimizdamenu">
-                                    <img src="<?PHP echo $path; ?>front/images/hkmenu1.png">&nbsp;&nbsp;Ziyaret Esasları ve Bilgilendirmeler
+                                <a href="{{ config("parameters.saray_url") }}gezi-rehberi/esaslar" id="hakkimizdamenu">
+                                    <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;Ziyaret Esasları ve Bilgilendirmeler
 
                                 </a>
                                 <div class="overlay1">
@@ -65,7 +65,7 @@
 
                             <div class="container">
 
-                                <a href="<?PHP echo $path; ?>gezi-rehberi/cocuklar-icin-dolmabahce-gezi-rehberi" class="" id="hakkimizdamenu"> <img src="<?PHP echo $path; ?>front/images/hkmenu1.png">&nbsp;&nbsp;
+                                <a href="{{ config("parameters.saray_url") }}gezi-rehberi/cocuklar-icin-dolmabahce-gezi-rehberi" class="" id="hakkimizdamenu"> <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
                                     Çocuklar için Dolmabahçe Sarayı Gezi Rehberi
                                 </a>
                                 <div class="overlay1">
@@ -79,7 +79,7 @@
 
 
                             <div class="container">
-                                <a href="<?PHP echo $path; ?>gezi-rehberi/cocuklar-icin-beylerbeyi-gezi-rehberi" id="hakkimizdamenu"> <img src="<?PHP echo $path; ?>front/images/hkmenu1.png">&nbsp;&nbsp;
+                                <a href="{{ config("parameters.saray_url") }}gezi-rehberi/cocuklar-icin-beylerbeyi-gezi-rehberi" id="hakkimizdamenu"> <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
                                     Çocuklar için Beylerbeyi Sarayı Gezi Rehberi
                                 </a>
                                 <div class="overlay1">
@@ -93,8 +93,8 @@
 
 
                             <div class="container" >
-                                <a href="<?PHP echo $path; ?>gezi-rehberi/ogretmenler-icin-dolmabahce-gezi-rehberi" id="hakkimizdamenu">
-                                    <img src="<?PHP echo $path; ?>front/images/hkmenu1.png">&nbsp;&nbsp;
+                                <a href="{{ config("parameters.saray_url") }}gezi-rehberi/ogretmenler-icin-dolmabahce-gezi-rehberi" id="hakkimizdamenu">
+                                    <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
                                     Dolmabahçe Sarayı Öğretmenler için Rehber Metin
                                 </a>
                                 <div class="overlay1">

@@ -6,7 +6,7 @@
  * Time: 11:34
  */
 ?>
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 <!-- start section#announcement -->
 <section id="announcement">
@@ -35,9 +35,9 @@
 
                                 </div>
                                 <div class="announcement-item-image">
-                                    <a href="<?PHP echo $path; ?>etkinlikler/{{ $post->id }}" class="announcement-item-image-link">
+                                    <a href="{{ config("parameters.saray_url") }}etkinlikler/{{ $post->id }}" class="announcement-item-image-link">
 
-                                        <img src="<?PHP echo $path; ?>front/images/Haberler/{{ $post->imagesurl }}" class="img-responsive" alt="">
+                                        <img src="{{ config("parameters.saray_url") }}front/images/Haberler/{{ $post->imagesurl }}" class="img-responsive" alt="">
                                     </a>
                                 </div>
 

@@ -4,7 +4,7 @@
 @foreach ($post_galleries as $post)
 <?php $a++;?>
 @endforeach
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 
     <!-- start section#slider -->
@@ -25,7 +25,7 @@
             @foreach ($post_galleries as $post)
 
 
-                    <div class="slider-item" style="background-image:url('<?PHP echo $path; ?>front/images/Atolyeler/{{ $post->url }}');">
+                    <div class="slider-item" style="background-image:url('{{ config("parameters.saray_url") }}front/images/Atolyeler/{{ $post->url }}');">
 
 
 

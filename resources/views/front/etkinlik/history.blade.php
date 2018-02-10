@@ -1,4 +1,4 @@
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
 
 <style>
     .koleksiyonlarimaj2 {
@@ -41,7 +41,7 @@
 
                                 <div class="col-md-6 koleksiyonlarimaj2">
 
-                                    <img src="<?PHP echo $path; ?>front/images/Haberler/{{ $post_contentpages->imagesurl }}" class="img-responsive" alt="">
+                                    <img src="{{ config("parameters.saray_url") }}front/images/Haberler/{{ $post_contentpages->imagesurl }}" class="img-responsive" alt="">
                                 </div>
 
 

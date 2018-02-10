@@ -26,9 +26,7 @@ class FrontController extends Controller
 {
 
 
-
-
-    public function index(Request $request){
+        public function index(Request $request){
 
         $post_etkinlik = Events::query()
             ->take(4)
