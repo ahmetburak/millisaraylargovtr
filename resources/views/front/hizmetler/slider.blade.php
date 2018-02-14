@@ -75,4 +75,4 @@
 </section>
 <!-- end section#slider -->
 
-<script src="<?PHP echo $path;?>front/js/script.js"></script>
+<script src="{{ config("parameters.saray_url") }}front/js/script.js"></script>

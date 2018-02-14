@@ -7,8 +7,6 @@
  */
 ?>
 
-<?PHP $path="http://bidiapp.com/millisaraylar.gov.tr1/";?>
-
 
 <!--start header-->
 <div class="ccsticky-nav1">
@@ -20,7 +18,7 @@
 
             <div class="main-logo">
                 <a href="{{ route('index') }}" class="main-logo-link">
-                    <img src="<?PHP echo $path; ?>front/images/logoTBMMMS2.png" class="main-logo-img" alt=""></a>
+                    <img src="{{ config("parameters.saray_url") }}front/images/logoTBMMMS2.png" class="main-logo-img" alt=""></a>
             </div>
 
             <div class="main-right">
@@ -42,22 +40,36 @@
                 </div><!-- #end social-media -->
 
 
+
+
+
                 <div class="right-div">
 
+
+
+
+  
                     <div class="languages">
                         <ul class="languages-list">
-                            <li class="languages-list-li"><a href="#" class="languages-list-link">TR</a></li>
-                            <li class="languages-list-li"><a href="#" class="languages-list-link">EN</a></li>
-                            <li class="languages-list-li"><a href="#" class="languages-list-link">ARB</a></li>
-                            <li class="languages-list-li"><a href="#" class="languages-list-link">ESP</a></li>
-                            <li class="languages-list-li"><a href="#" class="languages-list-link">FRA</a></li>
+                            <li class="languages-list-li"><a href="{{ config("parameters.saray_url") }}lang/tr" class="languages-list-link" id="tr">TR</a></li>
+                            <li class="languages-list-li"><a href="{{ config("parameters.saray_url") }}lang/en" class="languages-list-link ">EN</a></li>
+                            <li class="languages-list-li"><a href="{{ config("parameters.saray_url") }}lang/arb" class="languages-list-link ">ARB</a></li>
+                            <li class="languages-list-li"><a href="{{ config("parameters.saray_url") }}lang/es" class="languages-list-link ">ESP</a></li>
+                            <li class="languages-list-li"><a href="{{ config("parameters.saray_url") }}lang/fr" class="languages-list-link ">FRA</a></li>
                         </ul>
                     </div><!-- end #languages -->
 
                     <div class="sign">
                         <ul class="sign-list">
-                            <li class="sign-list-li"><a href="#" class="sign-list-link">Üye Ol</a></li>
-                            <li class="sign-list-li"><a href="#" class="sign-list-link">Giriş Yap</a></li>
+
+
+                            <?if (App::getLocale() == 'tr'){?>
+                                <li class="sign-list-li"><a href="#" class="sign-list-link">@lang('sozluk.uyeol')</a></li>
+                                <li class="sign-list-li"><a href="#" class="sign-list-link">@lang('sozluk.giris')</a></li>
+                            <?}?>
+
+
+
                         </ul>
                     </div>
 

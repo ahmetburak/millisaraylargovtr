@@ -9,7 +9,7 @@
 <section id="page-content">
 
     <div class="page-content-title page-content-title-hakkimizda " >
-       Atölyeler
+        @lang('sozluk.atolyeler')
     </div><!-- end .page-content-title -->
 
     <div class="container-fluid">

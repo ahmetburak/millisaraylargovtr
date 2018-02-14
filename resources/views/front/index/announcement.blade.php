@@ -8,6 +8,9 @@
 ?>
 
 
+
+
+
 <!-- start section#announcement -->
 <section id="announcement">
     <div class="announcement-top">
@@ -15,7 +18,10 @@
     </div><!-- end announcement-top -->
     <div class="container-fluid announcement-content">
         <div class="announcement-title"><br>
-            <h3>Haberler & Duyurular</h3>
+            <h3>@lang('sozluk.haberlerduyurular')
+
+
+            </h3>
         </div>
         <div class="row">
 
@@ -24,12 +30,12 @@
 
 
                 <?php $i=0; ?>
-                @foreach ($post_etkinlik as $post)
-                    <?php $i++; ?>
+                @foreach ($post_etkinlik as $i => $post)
+
 
 
                     <!---start Haber--->
-                        <div class="col-md-3 col-sm-6 col-xs-12" data-wow-delay=".8s" data-wow-animations="1.5s">
+                        <div class="col-md-3 col-sm-6 col-xs-12 col{{$i}}" data-wow-delay=".8s" data-wow-animations="1.5s">
                             <div class="announcement-item">
                                 <div class="announcement-item-title-alt">
 

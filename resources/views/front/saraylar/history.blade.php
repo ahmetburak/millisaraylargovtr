@@ -6,7 +6,7 @@
 <section id="page-content">
 
     <div class="page-content-title">
-        {{ $post_contentpages->title_tr}}
+        {{  object_get($post_contentpages, "title_{$dil}" ) }}
     </div><!-- end .page-content-title -->
 
     <div class="container-fluid">
@@ -17,7 +17,8 @@
 
                     <div class="contentpages" data-index="2">
 
-                        <h3><span class="bgok">&nbsp;</span>{{ $post_contentpages->title_tr}} </h3><br>
+                        <h3><span class="bgok">&nbsp;</span>
+                            {{  object_get($post_contentpages, "title_{$dil}" ) }}</h3><br>
                         <p>
 
                             {!!html_entity_decode($post_contentpages1)!!}

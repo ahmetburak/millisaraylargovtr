@@ -3,7 +3,8 @@
     z-index: 9999 !important;
 }
 </style>
-<?PHP $path = "http://bidiapp.com/millisaraylar.gov.tr1/";?>
+
+
 
 <!-- start section#slider -->
 <section id="slider">
@@ -37,4 +38,4 @@
 </section>
 
 
-<script src="<?PHP echo $path;?>front/js/script.js"></script>
+<script src="{{ config("parameters.saray_url") }}front/js/script.js"></script>

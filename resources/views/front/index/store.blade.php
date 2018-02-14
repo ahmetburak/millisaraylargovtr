@@ -9,6 +9,7 @@
 
 
 
+
 <style>
     .store-item-img img {
 
@@ -43,17 +44,17 @@
             <div class="col-md-12">
                 <div class="store-title-top">
                     <div class="store-title">
-                        Hediyelik Eşya Mağazası
+                        @lang('sozluk.hediyeliktitle')
                     </div><!-- end .store-title -->
 
                     <div class="store-title-links">
                         <ul class="store-title-links-list">
                             <li class="store-title-links-list-li">
-                                <a href="{{ config("parameters.saray_url") }}magaza/hediyelik-urunler" class="store-title-links-list-link">Hediyelik Ürünler</a></li>
+                                <a href="{{ config("parameters.saray_url") }}magaza/hediyelik-urunler" class="store-title-links-list-link">@lang('sozluk.menu.hediyelik')</a></li>
                             <li class="store-title-links-list-li">
-                                <a href="{{ config("parameters.saray_url") }}magaza/yildiz-porselen-urunleri" class="store-title-links-list-link">Yıldız Porselen Ürünleri</a></li>
+                                <a href="{{ config("parameters.saray_url") }}magaza/yildiz-porselen-urunleri" class="store-title-links-list-link">@lang('sozluk.menu.yildizurunler')</a></li>
                             <li class="store-title-links-list-li">
-                                <a href="{{ config("parameters.saray_url") }}magazalarimiz/" class="store-title-links-list-link">Mağazalarımız</a></li>
+                                <a href="{{ config("parameters.saray_url") }}magazalarimiz/" class="store-title-links-list-link">@lang('sozluk.menu.magaza')</a></li>
                         </ul>
                     </div><!-- end .store-title-links -->
                 </div><!-- end .store-title-top -->
@@ -96,7 +97,7 @@
                         </div><!-- end .store-item-img -->
                         <div class="store-item-content">
                             <div class="store-item-content-text">
-                                <div class="store-item-text">Satış Fiyatı / <span> {{$post->fiyat_b}}</span></div>
+                                <div class="store-item-text">Satış Fiyatı / <span> {!! $post->fiyat_b !!}</span></div>
 
                             </div>
 

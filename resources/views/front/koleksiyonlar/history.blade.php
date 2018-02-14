@@ -9,7 +9,8 @@
 <section id="page-content">
 
     <div class="page-content-title page-content-title-hakkimizda " >
-       Koleksiyonlar
+        @lang('sozluk.koleksiyonlartitle')
+
     </div><!-- end .page-content-title -->
 
     <div class="container-fluid">
@@ -20,10 +21,10 @@
 
                     <div class="page-content-item" data-index="2">
 
-                        <h3><span class="bgok">&nbsp;</span>{{ $post_contentpages->title_tr}}</h3><br>
+                        <h3><span class="bgok">&nbsp;</span>{{ object_get($post_contentpages, "title_{$dil}" )}}</h3><br>
                         <p>
 
-                            {!!html_entity_decode($post__CP[0])!!}
+                            {!! object_get($post_contentpages, "content_{$dil}" )!!}
 
                         </p>
                     </div>

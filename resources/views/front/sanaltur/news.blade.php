@@ -264,8 +264,8 @@
                         <div class="announcement-item-image">
 
 
-                         <a href="<?PHP echo $path;?>/front/images/SanalTur/exes/{{ $post->url }}" target="_blank">
-                            <img src="<?PHP echo $path;?>/front/images/SanalTur/images/{{ $post->imageurl }}" class="img-responsive2" alt="">
+                         <a href="{{ config("parameters.saray_url") }}/front/images/SanalTur/exes/{{ $post->url }}" target="_blank">
+                            <img src="{{ config("parameters.saray_url") }}/front/images/SanalTur/images/{{ $post->imageurl }}" class="img-responsive2" alt="">
                          </a>
                         </div>
 

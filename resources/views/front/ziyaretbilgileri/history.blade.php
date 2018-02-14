@@ -18,7 +18,7 @@
 <section id="page-content">
 
     <div class="page-content-title page-content-title-hakkimizda " >
-        {{ $post_contentpages->title_tr}}
+        {{   object_get($post_contentpages, "title_{$dil}" )  }}
     </div><!-- end .page-content-title -->
 
     <div class="container-fluid">
@@ -29,10 +29,11 @@
 
                     <div class="contentpages" data-index="2">
 
-                        <h3>Milli Saraylar'a Bağlı Birimlerde Ziyaret Günleri ve Saatleri </h3><br>
+
+
                         <p>
 
-                            {!!html_entity_decode($post_contentpages1)!!}
+                            {!!   object_get($post_contentpages, "content_{$dil}" )  !!}
 
                         </p>
                     </div>

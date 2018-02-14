@@ -20,7 +20,7 @@
                 <div class="place-images-content">
                     <div class="activities-title announcement-title ResimGalerisiTitle">
 
-                        <h2>&nbsp;Fotoğraf Galerisi</h2>
+                        <h2>&nbsp;@lang('sozluk.fotografgaleri')</h2>
                     </div>
 
                     <div id="swipeboxExample">

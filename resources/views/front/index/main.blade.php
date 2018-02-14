@@ -7,12 +7,16 @@
  */
 ?>
 
+
+
 @extends('layouts.front')
 
 @section("slider")
     @include("front.index.slider")
 @endsection
 
+
+<?if (App::getLocale() == 'tr'){?>
 @section("content")
     @include("front.index.actual")
 
@@ -22,5 +26,4 @@
 
     @include("front.index.store")
 @endsection
-
-
+<?}?>

@@ -10,23 +10,38 @@ use App\Shop;
 use App\Yayinlar;
 use App\sanaltur;
 
+use App;
 
 use App\Events;
+use App\Helpers\Utils;
 use App\Galleries;
 use App\Http\Controllers\Controller;
 use App\Sliders;
 use App\VisitTimes;
 use Illuminate\Http\Request;
+use \Illuminate\Support\Facades\Cookie;
+
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Event;
+
 
 
 class FrontController extends Controller
 {
 
 
-        public function index(Request $request){
+    public function index(Request $slug){
+                // $id = $request->query->get("id");
+                // $id = $request->request->get("id");
+                // $id = $request->input("id");
+
+                $post_contentpages = ContentPages::query()
+                    ->where("slug", $slug)
+                    ->first();
+
+
+
 
         $post_etkinlik = Events::query()
             ->take(4)
@@ -40,10 +55,19 @@ class FrontController extends Controller
             ->take(3)
             ->get();
 
+
+
+
+
+
+
+
         $datas = [
             "post_etkinlik" => $post_etkinlik,
+            "post_contentpages" => $post_contentpages,
             "post_slider_item" => $post_slider_item,
-            "post_shop" => $post_shop
+            "post_shop" => $post_shop,
+            "dil" => App::getLocale()
         ];
 
 
@@ -67,7 +91,8 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -90,7 +115,8 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -111,11 +137,20 @@ class FrontController extends Controller
         $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
 
 
+        $post_contentpages_bilet = ContentPages::query()
+            ->where("slug", 'gezibileti')
+            ->first();
+
+
+
+
 
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post_contentpages1" => $post_contentpages1
+            "post_contentpages_bilet" => $post_contentpages_bilet,
+            "post_contentpages1" => $post_contentpages1,
+            "dil" => App::getLocale()
 
 
 
@@ -175,7 +210,8 @@ class FrontController extends Controller
             "post_galleries" => $post_galleries,
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
-            "post_sliders" => $post_sliders
+            "post_sliders" => $post_sliders,
+            "dil" => App::getLocale()
 
 
         ];
@@ -195,14 +231,22 @@ class FrontController extends Controller
 
 
         $post_contentpages = ContentPages::query()
+            ->select()
             ->where("slug", $slug)
             ->first();
 
 
 
-
-        $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
-
+        if (App::getLocale()=="tr")
+            $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
+        else if (App::getLocale()=="en")
+            $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_en);
+        else if (App::getLocale()=="arb")
+            $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
+        else if (App::getLocale()=="tr")
+            $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
+        else if (App::getLocale()=="tr")
+            $post_contentpages1 = str_replace('<br>','<br><br>',$post_contentpages->content_tr);
 
 
 
@@ -245,6 +289,7 @@ class FrontController extends Controller
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
+            "dil" => App::getLocale()
 
 
         ];
@@ -298,7 +343,8 @@ class FrontController extends Controller
             "post_galleries" => $post_galleries,
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
-            "post_sliders" => $post_sliders
+            "post_sliders" => $post_sliders,
+            "dil" => App::getLocale()
 
 
         ];
@@ -367,7 +413,8 @@ class FrontController extends Controller
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
             "post__CP" => $post__CP,
-            "post_koleksiyonlar" => $post_koleksiyonlar
+            "post_koleksiyonlar" => $post_koleksiyonlar,
+            "dil" => App::getLocale()
 
         ];
         return view("front.koleksiyonlar.main", $datas);
@@ -434,7 +481,8 @@ class FrontController extends Controller
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
             "post__CP" => $post__CP,
-            "post_koleksiyonlar" => $post_koleksiyonlar
+            "post_koleksiyonlar" => $post_koleksiyonlar,
+            "dil" => App::getLocale()
 
         ];
         return view("front.tarihisahsiyetler.main", $datas);
@@ -450,10 +498,12 @@ class FrontController extends Controller
             ->where("slug", $slug)
             ->first();
 
+        $post__CP="";
+        if (isset($post_contentpages->content_tr)){
         $post_CP= $post_contentpages->content_tr;
         $post__CP=Explode('fafewfeafgeraggefeefaef3434', $post_CP);
         $post__CP = str_replace('<br>','<br><br>',$post__CP);
-
+        }
 
 
         $post_events = Events::query()
@@ -508,7 +558,8 @@ class FrontController extends Controller
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
             "post__CP" => $post__CP,
-            "post_koleksiyonlar" => $post_koleksiyonlar
+            "post_koleksiyonlar" => $post_koleksiyonlar,
+            "dil" => App::getLocale()
 
         ];
         return view("front.atolyeler.main", $datas);
@@ -627,7 +678,8 @@ class FrontController extends Controller
             "post_sliders" => $post_sliders,
             "post_koleksiyonlar" => $post_koleksiyonlar,
             "title" => $title,
-            "slugclass" => $slugclass
+            "slugclass" => $slugclass,
+            "dil" => App::getLocale()
 
 
         ];
@@ -656,7 +708,8 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -700,7 +753,8 @@ class FrontController extends Controller
             "post_contentpages" => $post_contentpages,
             "post_galleries" => $post_galleries,
             "post_sliders" => $post_sliders,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -752,7 +806,8 @@ class FrontController extends Controller
             "post_galleries" => $post_galleries,
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
-            "post_sliders" => $post_sliders
+            "post_sliders" => $post_sliders,
+            "dil" => App::getLocale()
 
 
         ];
@@ -812,7 +867,8 @@ class FrontController extends Controller
             "post_galleries_slider" => $post_galleries_slider,
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -834,6 +890,7 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
+            "dil" => App::getLocale()
 
 
 
@@ -856,6 +913,7 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
+            "dil" => App::getLocale()
 
 
 
@@ -924,7 +982,8 @@ class FrontController extends Controller
             "post_visittimes" => $post_visittimes,
             "post_sliders" => $post_sliders,
             "post__CP" => $post__CP,
-            "post_koleksiyonlar" => $post_koleksiyonlar
+            "post_koleksiyonlar" => $post_koleksiyonlar,
+            "dil" => App::getLocale()
 
         ];
         return view("front.etkinlik.main", $datas);
@@ -940,7 +999,7 @@ class FrontController extends Controller
             ->where("slug", "magazalar")
             ->first();
 
-        $post_contentpages1 = str_replace('<br>','<br>',$post_contentpages->content_tr);
+
 
 
 
@@ -951,8 +1010,8 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post_contentpages1" => $post_contentpages1,
             "post_magazalar" => $post_magazalar,
+            "dil" => App::getLocale()
 
 
 
@@ -978,6 +1037,7 @@ class FrontController extends Controller
         $datas = [
             "post_shop" => $post_shop,
             "slug_txt" => $slug_txt,
+            "dil" => App::getLocale()
 
 
 
@@ -1001,7 +1061,8 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -1024,7 +1085,8 @@ class FrontController extends Controller
 
         $datas = [
             "post_contentpages" => $post_contentpages,
-            "post__CP" => $post__CP
+            "post__CP" => $post__CP,
+            "dil" => App::getLocale()
 
 
         ];
@@ -1049,6 +1111,7 @@ class FrontController extends Controller
         $datas = [
             "post_sanaltur" => $post_sanaltur,
             "slug_txt" => $slug_txt,
+            "dil" => App::getLocale()
 
 
 
@@ -1056,6 +1119,8 @@ class FrontController extends Controller
         return view("front.sanaltur.main", $datas);
 
     }
+
+
 
 
 

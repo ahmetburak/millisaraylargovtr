@@ -13,7 +13,7 @@
 @endsection
 
 @section("content")
-    @include("front.hakkimizda.history")
+    @include("front.iletisim.history")
     @include("front.hakkimizda.form")
 
     @include("front.hakkimizda.maps")

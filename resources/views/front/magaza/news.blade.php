@@ -280,9 +280,9 @@
                         <div class="announcement-item-image">
 
                             @if ($slug_txt==="yildiz-porselen-urunleri")
-                                <img src="<?PHP echo $path;?>/front/images/magazalar/urunler/yildizporselen/{{ $post->url }}" class="img-responsive2" alt="">
+                                <img src="{{ config("parameters.saray_url") }}/front/images/magazalar/urunler/yildizporselen/{{ $post->url }}" class="img-responsive2" alt="">
                             @elseif ($slug_txt==="hediyelik-urunler")
-                                <img src="<?PHP echo $path;?>/front/images/magazalar/urunler/{{ $post->url }}" class="img-responsive2" alt="">
+                                <img src="{{ config("parameters.saray_url") }}/front/images/magazalar/urunler/{{ $post->url }}" class="img-responsive2" alt="">
                             @endif
 
 

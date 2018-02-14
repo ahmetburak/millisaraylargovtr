@@ -1,4 +1,3 @@
-<?PHP $path = "http://bidiapp.com/millisaraylar.gov.tr1/";?>
 <style>
     .strong {
 
@@ -51,7 +50,7 @@
 
                                     <div class="col-md-6 content">
                                     <div class="boldercontent"><h4> {{ $post->title }}<br><br>
-                                    <img src="<?PHP echo $path;?>/front/images/magazalar/{{ $post->imageurl }}" border="5">
+                                    <img src="{{ config("parameters.saray_url") }}/front/images/magazalar/{{ $post->imageurl }}" border="5">
 
 
 
@@ -83,7 +82,7 @@
                                                 </div>
                                                 <div class="announcement-item-image ">
                                                     <a href="" class="announcement-item-image-link" target="_blank">
-                                                        <img src="<?PHP echo $path;?>/front/images/magazalar/{{ $post->imageurl }}" class="img-responsive " alt="" >
+                                                        <img src="{{ config("parameters.saray_url") }}/front/images/magazalar/{{ $post->imageurl }}" class="img-responsive " alt="" >
                                                     </a>
                                                 </div>
 

@@ -232,20 +232,22 @@
 
             <div class="contentpages" data-index="2">
 
-                <h3> {{ $post_contentpages->title_tr}}</h3><br>
+                <h3>{{   object_get($post_contentpages, "title_{$dil}" )  }}</h3><br>
                 <p>
 
-                    {!!html_entity_decode($post_contentpages1)!!}
+                    {!! object_get($post_contentpages, "content_{$dil}" )  !!}
+
+<br><br>
 
 
 
-
+            <?if (App::getLocale() == 'tr'){?>
 
 
 
             <div class="container">
                 <a href="{{ config("parameters.saray_url") }}magaza/hediyelik-urunler" id="hakkimizdamenu"> <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
-                    Hediyelik Ürünler
+                    @lang('sozluk.menu.hediyelik')
                 </a>
                 <div class="overlay1">
 
@@ -253,7 +255,7 @@
             </div>
             <div class="container">
                 <a href="{{ config("parameters.saray_url") }}magaza/yildiz-porselen-urunleri" id="hakkimizdamenu"> <img src="{{ config("parameters.saray_url") }}front/images/hkmenu1.png">&nbsp;&nbsp;
-                    Yıldız Porselen Ürünleri
+                    @lang('sozluk.menu.yildizurunler')
                 </a>
                 <div class="overlay1">
 
@@ -261,7 +263,7 @@
             </div>
             <br>
 
-
+                <?}?>
 
 
         </div>
@@ -279,7 +281,7 @@
                         </div>
                         <div class="announcement-item-image1">
 
-                            <img src="<?PHP echo $path;?>/front/images/magazalar/{{ $post->imageurl }}" class="img-responsive2" alt="">
+                            <img src="{{ config("parameters.saray_url") }}/front/images/magazalar/{{ $post->imageurl }}" class="img-responsive2" alt="">
 
 
 
@@ -288,7 +290,8 @@
 
                         <div class="announcement-item-content">
                             <div class="announcement-item-content-text">
-                                {{ $post->title }}
+
+                                {{   object_get($post, "title_{$dil}" )  }}
 
 
                             </div>

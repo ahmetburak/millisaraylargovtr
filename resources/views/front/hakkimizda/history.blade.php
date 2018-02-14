@@ -9,7 +9,7 @@
 <section id="page-content">
 
     <div class="page-content-title page-content-title-hakkimizda " >
-        {{ $post_contentpages->title_tr}}
+        @lang('sozluk.menu.hakkimizda')
     </div><!-- end .page-content-title -->
 
     <div class="container-fluid">
@@ -21,10 +21,12 @@
 
                         <div class="contentpages" data-index="2">
 
-                            <h3><span class="bgok">&nbsp;</span>TBMM Genel Sekreterliği (Milli Saraylar) </h3><br>
+                            <h3><span class="bgok"></span>@lang('sozluk.hakkimizda_title')</h3><br>
                             <p>
 
-                                {!!html_entity_decode($post_contentpages->content_tr)!!}
+
+
+                                {!!  object_get($post_contentpages, "content_{$dil}" )  !!}
 
                             </p>
                         </div>

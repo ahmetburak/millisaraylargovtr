@@ -6,6 +6,10 @@
  * Time: 11:30
  */
 ?>
+
+
+
+
 @extends('layouts.front2')
 
 @section("slider")

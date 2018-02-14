@@ -78,7 +78,9 @@ return [
     |
     */
 
-    'locale' => 'en',
+
+    'locale' => 'tr',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -91,7 +93,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'tr',
 
     /*
     |--------------------------------------------------------------------------
@@ -163,6 +165,9 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+        ied3vil\LanguageSwitcher\Providers\LanguageSwitcherProvider::class,
+
 
         /*
          * Package Service Providers...
@@ -226,6 +231,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Utils' => App\Helpers\Utils::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
 
 
     ],
